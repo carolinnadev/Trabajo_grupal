@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio - Plataforma de Eventos</title>
+        <!-- FontAwesome para el icono de WhatsApp -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Estilos propios -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <!-- 1. Barra de Navegación -->
+        <header class="barra-navegacion">
+            <div class="contenedor nav-contenido">
+                <a href="#" class="logo">Plataforma de Eventos</a>
+                
+                <nav class="enlaces-nav">
+                    <a href="#">Inicio</a>
+                    <a href="#contacto">Contacto</a>
+                    <!-- Ruta pendiente de unir con tus compañeros -->
+                    <a href="#" class="btn-sesion">Iniciar Sesión</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- 2. Sección Principal (Hero) -->
+        <section class="hero">
+            <div class="contenedor">
+                <h1>Eventos Académicos, Tecnológicos y Culturales</h1>
+                <p>Consulta los próximos eventos, fechas y detalles disponibles en nuestra organización.</p>
+                <a href="#" class="btn-hero">Iniciar Sesión</a>
+            </div>
+        </section>
+
+        <!-- 3. Formulario de Contacto -->
+        <main class="seccion-contacto" id="contacto">
+            <div class="contenedor contenedor-contacto">
+                <h2>Formulario de Contacto</h2>
+                
+                <!-- Mensaje de éxito (Se muestra solo cuando se activa el target #exito) -->
+                <div id="exito" class="mensaje-exito">
+                    Mensaje enviado con éxito
+                </div>
+
+                <form action="#exito" method="GET" class="formulario">
+                    <div class="grupo-campo">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+                </form>
+            </div>
+        </main>
+
+        <!-- 4. Botón Flotante de WhatsApp con Icono -->
+        <a href="https://wa.me/573001234567" class="whatsapp-flotante" target="_blank" aria-label="Contactar por WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <!-- Footer -->
+        <footer class="pie-pagina">
+            <p>&copy; 2026 Organización de Eventos. Todos los derechos reservados.</p>
+        </footer>
+
+    </body>
+</html>

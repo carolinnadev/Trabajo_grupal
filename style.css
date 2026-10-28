@@ -1,0 +1,241 @@
+/* Variables de Colores */
+:root {
+    --color-azul: #1e3a8a;
+    --color-celeste: #0ea5e9;
+    --color-fondo: #f8fafc;
+    --color-texto: #1e293b;
+    --color-blanco: #ffffff;
+    --color-whatsapp: #25D366;
+    --color-whatsapp-hover: #1ebd56;
+    --color-borde: #cbd5e1;
+    --color-verde-exito: #16a34a;
+    --color-fondo-exito: #dcfce7;
+}
+
+/* Estilos Generales */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Contenedor General */
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Barra de Navegación */
+.barra-navegacion {
+    background-color: var(--color-azul);
+    padding: 1rem 0;
+}
+
+.nav-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--color-blanco);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.enlaces-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.enlaces-nav a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.enlaces-nav a:hover {
+    opacity: 0.8;
+}
+
+/* Botón de Iniciar Sesión */
+.enlaces-nav .btn-sesion {
+    background-color: var(--color-blanco);
+    color: var(--color-azul);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.enlaces-nav .btn-sesion:hover {
+    background-color: #f1f5f9;
+    color: var(--color-azul);
+    opacity: 1;
+}
+
+/* Sección Hero */
+.hero {
+    background: linear-gradient(135deg, var(--color-azul), var(--color-celeste));
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.hero h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-hero {
+    background-color: #ffc107;
+    color: var(--color-texto);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn-hero:hover {
+    background-color: #e0a800;
+}
+
+/* Sección y Formulario de Contacto */
+.seccion-contacto {
+    padding: 60px 0;
+}
+
+.contenedor-contacto {
+    background-color: var(--color-blanco);
+    max-width: 650px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contenedor-contacto h2 {
+    color: var(--color-azul);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+/* Mensaje de éxito en CSS puro */
+.mensaje-exito {
+    display: none;
+    background-color: var(--color-fondo-exito);
+    color: var(--color-verde-exito);
+    border: 1px solid var(--color-verde-exito);
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Se activa al hacer clic en enviar (target #exito) */
+.mensaje-exito:target {
+    display: block;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo-campo label {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.grupo-campo input,
+.grupo-campo textarea {
+    padding: 10px 12px;
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
+    border-color: var(--color-celeste);
+}
+
+.boton-enviar {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.boton-enviar:hover {
+    background-color: #172554;
+}
+
+/* Botón Flotante de WhatsApp con Icono */
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-whatsapp);
+    color: var(--color-blanco);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.whatsapp-flotante:hover {
+    background-color: var(--color-whatsapp-hover);
+    transform: scale(1.1);
+}
+
+/* Pie de página */
+.pie-pagina {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 40px;
+}
