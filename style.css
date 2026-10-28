@@ -78,14 +78,20 @@ body {
 }
 
 .enlaces-nav .btn-sesion:hover {
-    background-color: #f1f5f9;
+    background-color: rgb(218, 218, 218);
     color: var(--color-azul);
     opacity: 1;
 }
 
 /* Sección Hero */
 .hero {
-    background: linear-gradient(135deg, var(--color-azul), var(--color-celeste));
+    background-image: linear-gradient(rgba(13, 110, 253, 0.3), rgba(13, 110, 253, 0.5)), /* esta linea coloca una capa translucida encima de la imagen, siempre debe de tener un punto de incio y uno de final */
+                      url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKWSQnMICiFpOINLqC_eJxSHzb74eupVna0JXjwhDPcKQAev7jSPXyRi8&s=10');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
     color: var(--color-blanco);
     text-align: center;
     padding: 90px 20px;
@@ -187,6 +193,24 @@ body {
 .grupo-campo input:focus,
 .grupo-campo textarea:focus {
     border-color: var(--color-celeste);
+}
+
+/* Ajustes para el contenedor del carrusel de Bootstrap */
+#carouselEventos {
+    max-width: 850px;
+    margin: 0 auto;
+    /* Espacio interno a la izquierda y derecha para que el texto y botones no lleguen a las flechas */
+    padding-left: 60px !important;
+    padding-right: 100px !important;
+}
+
+/* Centrado y límites para los botones de control */
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
 }
 
 .boton-enviar {

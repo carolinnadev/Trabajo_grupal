@@ -6,11 +6,12 @@
         <title>Inicio - Plataforma de Eventos</title>
         <!-- FontAwesome para el icono de WhatsApp -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <!-- Estilos propios -->
+        <!-- Css bootstrap 5.3v para carrusel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <!-- Estilos propios-->
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-
         <!-- 1. Barra de Navegación -->
         <header class="barra-navegacion">
             <div class="contenedor nav-contenido">
@@ -18,8 +19,9 @@
                 
                 <nav class="enlaces-nav">
                     <a href="#">Inicio</a>
+                    <a href="#eventos">Eventos</a>
                     <a href="#contacto">Contacto</a>
-                    <!-- Ruta pendiente de unir con tus compañeros -->
+                    <!-- Ruta pendiente de unir con mis compañeros -->
                     <a href="#" class="btn-sesion">Iniciar Sesión</a>
                 </nav>
             </div>
@@ -34,7 +36,122 @@
             </div>
         </section>
 
-        <!-- 3. Formulario de Contacto -->
+        <!-- 3. Carrusel de Eventos -->
+        <section class="seccion-eventos py-5" id="eventos">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-2">Próximos Eventos</h2>
+                <p class="text-center text-muted mb-4">Explora los eventos académicos, tecnológicos y culturales más destacados</p>
+                
+                <!-- Carrusel nativo de Bootstrap -->
+                <div id="carouselEventos" class="carousel slide shadow-sm rounded-4 overflow-hidden bg-white p-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        
+                        <!-- Diapositiva 1: Campus Party (Tecnología) -->
+                        <div class="carousel-item active">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" class="d-block w-100 rounded-3 object-fit-cover" style="height: 240px;" alt="Campus Party">
+                                </div>
+                                <div class="col-md-7">
+                                    <span class="badge bg-primary mb-2">Tecnología</span>
+                                    <h4 class="fw-bold">Campus Party</h4>
+                                    <p class="text-secondary small mb-3">El encuentro de tecnología, creatividad, ocio y cultura digital más grande del mundo, enfocado en innovación y desarrollo.</p>
+                                    <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diapositiva 2: Latinoware (Tecnología) -->
+                        <div class="carousel-item">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" class="d-block w-100 rounded-3 object-fit-cover" style="height: 240px;" alt="Latinoware">
+                                </div>
+                                <div class="col-md-7">
+                                    <span class="badge bg-primary mb-2">Tecnología</span>
+                                    <h4 class="fw-bold">Latinoware</h4>
+                                    <p class="text-secondary small mb-3">Congreso Latinoamericano de Software Libre y Tecnologías Abiertas, reuniendo a expertos en código abierto e infraestructura.</p>
+                                    <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diapositiva 3: TEDx Conferences (Académico) -->
+                        <div class="carousel-item">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=600&q=80" class="d-block w-100 rounded-3 object-fit-cover" style="height: 240px;" alt="TEDx Conferences">
+                                </div>
+                                <div class="col-md-7">
+                                    <span class="badge bg-success mb-2">Académico</span>
+                                    <h4 class="fw-bold">TEDx Conferences</h4>
+                                    <p class="text-secondary small mb-3">Conferencias locales independientes inspiradas en difundir ideas innovadoras sobre ciencia, educación y desarrollo social.</p>
+                                    <a href="#" class="btn btn-outline-success btn-sm rounded-pill px-4">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diapositiva 4: Congreso CIES (Académico) -->
+                        <div class="carousel-item">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" class="d-block w-100 rounded-3 object-fit-cover" style="height: 240px;" alt="Congreso Internacional de Educación Superior CIES">
+                                </div>
+                                <div class="col-md-7">
+                                    <span class="badge bg-success mb-2">Académico</span>
+                                    <h4 class="fw-bold">Congreso Internacional CIES</h4>
+                                    <p class="text-secondary small mb-3">Espacio de debate académico y científico donde rectores, investigadores y docentes analizan el futuro de la educación.</p>
+                                    <a href="#" class="btn btn-outline-success btn-sm rounded-pill px-4">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diapositiva 5: Feria Internacional del Libro (Cultural - Libros) -->
+                        <div class="carousel-item">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-5">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjbYOz0IZ97Ee4QBLe_9ZZQ9K0mBi1fmYNFBIOSbAdSA&s=10" class="d-block w-100 rounded-3 object-fit-cover" style="height: 240px;" alt="Feria Internacional del Libro">
+                                </div>
+                                <div class="col-md-7">
+                                    <span class="badge bg-warning text-dark mb-2">Cultural</span>
+                                    <h4 class="fw-bold">Feria Internacional del Libro (FIL)</h4>
+                                    <p class="text-secondary small mb-3">Uno de los eventos editoriales y culturales más importantes del mundo hispanohablante, con presentaciones y talleres.</p>
+                                    <a href="#" class="btn btn-outline-warning text-dark btn-sm rounded-pill px-4">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diapositiva 6: Hay Festival (Cultural - Conversatorio/Literatura) -->
+                        <div class="carousel-item">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-5">
+                                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" class="d-block w-100 rounded-3 object-fit-cover" style="height: 240px;" alt="Hay Festival">
+                                </div>
+                                <div class="col-md-7">
+                                    <span class="badge bg-warning text-dark mb-2">Cultural</span>
+                                    <h4 class="fw-bold">Hay Festival</h4>
+                                    <p class="text-secondary small mb-3">Reconocido festival cultural que celebra la literatura, el pensamiento, el arte y la ciencia mediante charlas magistrales.</p>
+                                    <a href="#" class="btn btn-outline-warning text-dark btn-sm rounded-pill px-4">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Controles de navegación de Bootstrap -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselEventos" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselEventos" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Formulario de Contacto -->
         <main class="seccion-contacto" id="contacto">
             <div class="contenedor contenedor-contacto">
                 <h2>Formulario de Contacto</h2>
@@ -70,7 +187,7 @@
             </div>
         </main>
 
-        <!-- 4. Botón Flotante de WhatsApp con Icono -->
+        <!-- 5. Botón Flotante de WhatsApp con Icono -->
         <a href="https://wa.me/573001234567" class="whatsapp-flotante" target="_blank" aria-label="Contactar por WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
@@ -80,5 +197,9 @@
             <p>&copy; 2026 Organización de Eventos. Todos los derechos reservados.</p>
         </footer>
 
+        <!-- JS de Bootstrap 5.3v -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        
     </body>
 </html>
