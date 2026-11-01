@@ -416,3 +416,21 @@ body {
         font-size: 1.05rem;
     }
 }
+
+/* Ajustes para pantallas estrechas */
+@media (max-width: 575.98px) {
+    .pagina-login .nav-contenido {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .pagina-login .nav-contenido nav {
+        text-align: center;
+    }
+
+    .tarjeta-login .form-control {
+        min-height: 48px;
+    }
+}
