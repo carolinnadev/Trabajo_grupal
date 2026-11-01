@@ -21,7 +21,7 @@ formularioLogin.addEventListener("submit", (evento) => {
         contrasenaIngresada === credencialesDemo.contrasena
     ) {
         sessionStorage.setItem("sesionEventos", "activa");
-        mensajeLogin.textContent = "¡Inicio de sesión correcto!";
+        window.location.href = "eventos.html";
         return;
     }
 
