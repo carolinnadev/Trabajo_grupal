@@ -5,39 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Inicio de sesión de la Plataforma de Eventos.">
     <title>Iniciar sesión | Plataforma de Eventos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-    <header>
-        <a href="../index.html">Plataforma de Eventos</a>
-        <nav aria-label="Navegación principal">
-            <a href="../index.html">Volver al inicio</a>
-        </nav>
+<body class="pagina-login">
+    <header class="barra-navegacion">
+        <div class="contenedor nav-contenido">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon" aria-hidden="true">✦</span>
+                Plataforma de Eventos
+            </a>
+            <nav aria-label="Navegación principal">
+                <a href="../index.html" class="enlace-volver">Volver al inicio</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section aria-labelledby="titulo-login">
-            <h1 id="titulo-login">Iniciar sesión</h1>
-            <p>Ingresa tus credenciales para consultar los eventos.</p>
+    <main class="zona-login container-fluid">
+        <div class="container">
+            <div class="row justify-content-center">
+                <section class="col-12 col-sm-10 col-md-7 col-lg-5" aria-labelledby="titulo-login">
+                    <div class="card tarjeta-login border-0 shadow-sm">
+                        <div class="card-body p-4 p-md-5">
+                            <p class="etiqueta-login">ACCESO A EVENTOS</p>
+                            <h1 id="titulo-login">Bienvenido</h1>
+                            <p class="descripcion-login">Ingresa tus credenciales para consultar los próximos eventos.</p>
 
-            <form id="formulario-login">
-                <div>
-                    <label for="usuario">Usuario</label>
-                    <input type="text" id="usuario" name="usuario" autocomplete="username" required>
-                </div>
+                            <div id="mensaje-login" class="mensaje-login" role="status" aria-live="polite"></div>
 
-                <div>
-                    <label for="contrasena">Contraseña</label>
-                    <input type="password" id="contrasena" name="contrasena" autocomplete="current-password" required>
-                </div>
+                            <form id="formulario-login" class="formulario-login">
+                                <div class="mb-3">
+                                    <label for="usuario" class="form-label">Usuario</label>
+                                    <input type="text" id="usuario" name="usuario" class="form-control" autocomplete="username" required>
+                                </div>
 
-                <button type="submit">Ingresar</button>
-            </form>
+                                <div class="mb-4">
+                                    <label for="contrasena" class="form-label">Contraseña</label>
+                                    <input type="password" id="contrasena" name="contrasena" class="form-control" autocomplete="current-password" required>
+                                </div>
 
-            <p id="mensaje-login" role="status" aria-live="polite"></p>
-        </section>
+                                <button type="submit" class="btn btn-primary boton-login w-100">Iniciar sesión</button>
+                            </form>
+
+                            <p class="nota-login">Acceso de demostración para esta actividad académica.</p>
+                            <a class="volver-login" href="../index.html">← Regresar a la página principal</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
-    <footer>
+    <footer class="pie-pagina pie-login">
         <p>&copy; 2026 Organización de Eventos. Todos los derechos reservados.</p>
     </footer>
     <script src="../js/login.js"></script>
